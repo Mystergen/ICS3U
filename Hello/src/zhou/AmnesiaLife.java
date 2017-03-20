@@ -58,7 +58,7 @@ public class AmnesiaLife
 			if(choices[0].equals("rock") && setting[0] == false)
 			{
 				//creates the sound effects
-				try{
+				/*try{
 					Clip theme = AudioSystem.getClip(); //create the clip object
 					theme.open(AudioSystem.getAudioInputStream(new File("Teleport Sound Effect.mp3"))); //open the given file for the clip
 
@@ -70,7 +70,7 @@ public class AmnesiaLife
 				catch (Exception e) 
 				{
 					e.printStackTrace();
-				}
+				}*/
 				//imports and displays image
 				BufferedImage jpgImage = null;
 				
@@ -132,7 +132,8 @@ public class AmnesiaLife
 					}
 				}
 				else//leave cave
-				{c.drawImage (jpgImage, 0, 0, 800, 800, null);
+				{
+					c.drawImage (jpgImage, 0, 0, 800, 800, null);
 					c.println("You leave the cave, you find a bone, do you pick it up ? (yes/no)");
 					choices[5] = c.readLine();
 					c.clear();
@@ -156,7 +157,7 @@ public class AmnesiaLife
 			//easy button starts (future)
 			else if (choices[0].equals ("easy button") && setting [1] == false)
 			{
-				try{
+				/*try{
 					Clip theme = AudioSystem.getClip(); //create the clip object
 					theme.open(AudioSystem.getAudioInputStream(new File("Teleport Sound Effect.mp3"))); //open the given file for the clip
 
@@ -168,7 +169,7 @@ public class AmnesiaLife
 				catch (Exception e) 
 				{
 					e.printStackTrace();
-				}
+				}*/
 				BufferedImage jpgImage = null;
 				
 				try {
