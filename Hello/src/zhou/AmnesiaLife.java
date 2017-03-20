@@ -72,7 +72,7 @@ public class AmnesiaLife
 					jpgImage = ImageIO.read(new File("resources/cav.jpg"));
 					
 				} catch (IOException e) {
-					System.err.println("There was ana error loading the image.");
+					
 					e.printStackTrace();
 				}
 				c.drawImage (jpgImage, 0, 0, 800, 800, null);
