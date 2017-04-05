@@ -1,0 +1,31 @@
+/**
+ * PrimeAllDay
+ * Finds out if the number inputed is prime
+ * @author ethanzhou
+ *April 4 2017
+ */
+import java.util.Scanner;
+public class isPrime {
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) {
+		boolean prove = false;
+		do{
+		System.out.println("Input a number, and I will tell you if it is prime or not");
+		int input = sc.nextInt();
+		System.out.println(iPrime(input));
+		System.out.println("Do you want to try again? \n yes \n no");
+		}while(sc.next().equals("yes"));
+	}
+	public static String iPrime(int real){
+		int check = real;
+		int total = 1;
+		while(real != 0 && real > 1){
+			total = check%(real--);
+		}
+		if (total == 0 || check == 0 && check != 2){
+			return ("it is prime");
+		}else{
+			return ("it is not prime");
+		}
+	}
+}
