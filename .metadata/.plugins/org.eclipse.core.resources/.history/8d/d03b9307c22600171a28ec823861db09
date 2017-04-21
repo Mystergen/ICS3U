@@ -1,0 +1,32 @@
+
+public class PerfectInt {
+
+	
+	public static void main(String[] args){
+		
+		for(int i = 1, n = 1; i < 100 && n < 100; i++){
+			if (i == 99){
+				n++; i = 1;
+			}
+			System.out.println(mod(i,n));// System.out.print(i);
+		}
+	}
+	
+	public static boolean mod (int i, int n){
+		if (i % n == 0){
+			
+			for(int hi = 0; hi < i ;hi++){
+				int[] store = new int[hi];
+				store[hi] = i/n;
+				int total = store[hi];
+				if( total == i){
+					return true;
+				}else
+				{
+					return false;
+				}
+			}
+		}
+		return false;
+	}
+}

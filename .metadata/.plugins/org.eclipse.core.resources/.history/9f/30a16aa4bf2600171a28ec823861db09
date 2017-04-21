@@ -1,0 +1,24 @@
+
+public class PerfectInt {
+
+	
+	public static void main(String[] args){
+		
+		for(int i = 1, n = 1; i < 100 && n < 100; i++){
+			if (i == 99){
+				n++; i = 1;
+			}
+			mod(i,n);
+		}
+	}
+	
+	public static boolean mod (int i, int n){
+		if (i % n == 0){
+			int hi =+ 1;
+				int[] store = new int[hi];
+				store[hi] = i/n;
+				for(int g = 0; g < store[hi].length - 1;)
+				int total = store[hi]
+		}
+	}
+}

@@ -1,0 +1,33 @@
+
+public class PythagoremTrip {
+
+	
+	public static void main(String[] args){
+		for(int i = 1, counter = 1; i <= counter && counter < 100; i++){
+			if ( i == 99){
+				counter++;
+				i = 1;
+			}
+			double total = Math.pow(i, 2) + Math.pow(counter, 2);
+			if(pie(total) == true){
+				System.out.println(i+ "+ " + counter+ "= " + total);
+			}else{
+				System.out.println("did not work");
+			}
+			
+		}
+
+		
+	}
+	
+	public static boolean pie(double n){
+		int x = (int)Math.sqrt(n);
+		double check = Math.pow(x,2);
+		if(check == n){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+}
