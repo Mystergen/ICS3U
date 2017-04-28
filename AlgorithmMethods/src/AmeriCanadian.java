@@ -1,5 +1,10 @@
 import java.util.Scanner;
-
+/**
+ * AmeriCanadian
+ * Checks if the word inputed is using American spelling or Canadian spelling
+ * @author ethanzhou
+ *April 24 2017
+ */
 public class AmeriCanadian {
 
 	public static void main(String[] args) {
@@ -16,9 +21,9 @@ public class AmeriCanadian {
 				for (int i = 0; i < userInput.length(); i++) {
 					wordLength[i] = userInput.charAt(i);
 				}*/
-				
-				if(userInput.charAt(userInput.length()-1) == 'o' && userInput.charAt(userInput.length()) == 'r') {
-				userInput.replace("or", "our");	
+				//something wrong with if statement
+				if(userInput.charAt(userInput.length()-2) == 'o' && userInput.charAt(userInput.length())-1 == 'r') {
+				userInput = userInput.replace("or", "our");	
 				
 				}
 				System.out.println(userInput);

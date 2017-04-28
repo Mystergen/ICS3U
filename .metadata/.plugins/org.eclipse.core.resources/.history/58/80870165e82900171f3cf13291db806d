@@ -1,0 +1,42 @@
+
+import java.util.Scanner;
+
+/**
+ * GameOfLife
+ * 
+ * @author ethanzhou
+ *April 24 2017
+ */
+public class Life {
+	static Scanner br = new Scanner(System.in);
+	static int[][] field = new int[10][10];
+	static int i;
+	static int n;
+	static boolean check = false;
+	public static void main(String[] args){
+		do{	
+		for(i = 0; i < 10; i++){
+			for(n = 0; n < 10; n++){
+				System.out.print(start());	
+			}
+			System.out.println();
+		}
+		}while(check == true);
+	}
+	
+	
+	public static int start(){
+		if(check == false){
+			check = true;
+			return field[i][n] = 0;
+		}else if (check == true){
+			System.out.println("please input coordiantes from 0 - 10");
+			int ch1 = br.nextInt();
+			int ch2 = br.nextInt();
+			field[ch1][ch2] = 1;
+		}
+			return	field[i][n];
+	}
+	
+	
+}

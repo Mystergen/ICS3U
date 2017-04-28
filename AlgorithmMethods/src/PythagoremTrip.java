@@ -1,4 +1,9 @@
-
+/**
+ * PythagoremSquare
+ * goes through numbers 1 - 100 and uses the pythagorem thero to determine if c is a perfect square
+ * @author ethanzhou
+ *April 24 2017
+ */
 public class PythagoremTrip {
 
 	

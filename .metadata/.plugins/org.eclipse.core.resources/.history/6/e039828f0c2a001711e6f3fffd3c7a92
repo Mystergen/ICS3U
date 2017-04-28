@@ -1,0 +1,46 @@
+
+import java.util.Scanner;
+
+/**
+ * GameOfLife
+ * 
+ * @author ethanzhou
+ *April 24 2017
+ */
+public class Life {
+	static Scanner br = new Scanner(System.in);
+	static int[][] field = new int[10][10];
+	static int i;
+	static int n;
+	
+	
+	public static void main(String[] args){
+		do{	
+		for(i = 0; i < 10; i++){
+			for(n = 0; n < 10; n++){
+				System.out.print(field[i][n] = 0);	
+			}
+			System.out.println();
+		}
+		System.out.print(start());
+		}while(true);
+	}
+	
+	
+	public static int start(){
+		System.out.println("please input coordiantes from 0 - 10");
+		for(i = 0; i < 10; i++){
+			for(n = 0; n < 10; n++){
+			//int ch1 = br.nextInt();
+			//int ch2 = br.nextInt();
+				int ch1;
+				int ch2;
+			field[ch1 = br.nextInt()][ch2 = br.nextInt()] = 1;
+			
+			}
+		}
+		return field[i][n];
+	}
+	
+	
+}

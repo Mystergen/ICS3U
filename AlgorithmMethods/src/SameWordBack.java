@@ -19,7 +19,11 @@ public class SameWordBack {
 		System.out.println("Do you want to try again?");
 		}while(sc.nextLine().equals("yes"));
 	}
-	
+	/**
+	 * finds out if the word inputed is the same when printed backwards
+	 * @param word is the string that is checked to see if it is the same backwards
+	 * @return returns true if the word is the same backwards like tenet, or false if it isn't
+	 */
 	public static boolean back(String word){
 		for(int i = 0; i < word.length(); i++){
 				if (word.charAt(i) == word.charAt(word.length()-1)){
