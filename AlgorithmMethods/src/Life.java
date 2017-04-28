@@ -3,21 +3,21 @@ import java.util.Scanner;
 
 /**
  * GameOfLife
- * Demonstrates the game of life multiplying and and dying (cornwel or something created game, still don't understand it myself that well, but i kinda have it)
+ * Demonstrates the game of life multiplying and and dying (conway or something created game, still don't understand it myself that well, but i kinda have it)
  * @author ethanzhou
  *April 24 2017
  */
 public class Life {
 	static Scanner br = new Scanner(System.in);
-	static int[][] field = new int[10][10];
+	static int[][] field = new int[20][20];
 	static int i;
 	static int n;
 	static boolean k = true;
 	public static void main(String[] args){
 		do{
 		if (n == 0){	
-			for(i = 0; i < 10; i++){
-				for(n = 0; n < 10; n++){
+			for(i = 0; i < 20; i++){
+				for(n = 0; n < 20; n++){
 					System.out.print(field[i][n] = 0);
 				}
 				System.out.println();
