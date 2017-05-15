@@ -1,4 +1,4 @@
-package dev.tilegame;
+	package dev.tilegame;
 
 import java.awt.Color;
 import java.awt.Graphics;

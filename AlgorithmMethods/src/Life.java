@@ -13,6 +13,7 @@ public class Life {
 	static int i;
 	static int n;
 	static boolean k = true;
+	
 	public static void main(String[] args){
 		do{
 		if (n == 0){	
@@ -22,9 +23,11 @@ public class Life {
 				}
 				System.out.println();
 			}
-		}else{
 			start();
+		}else{
+			//start();
 			board();
+			//born();
 		}
 		}while(k == true);
 	}
@@ -38,7 +41,7 @@ public class Life {
 		int time = 0;
 		int track = br.nextInt();
 		do{
-		System.out.println("please input coordiantes from 0 - 10");
+		System.out.println("please input coordiantes from 0 - 20");
 		field[br.nextInt()][br.nextInt()] = 1;
 		time++;
 		}while(time < track);
@@ -51,11 +54,11 @@ public class Life {
 	 * It calls the rules to update the new 2-D array and then prints it
 	 */
 	public static void board(){
-		for(i = 0; i < 10; i++){
-			for(n = 0; n < 10; n++){
-				cellCheck(field[i][n]);
+		for(i = 0; i < 20; i++){
+			for(n = 0; n < 20; n++){
 				System.out.print(field[i][n]);
-					
+				cellCheck(field[i][n]);
+				//born();
 			}
 			System.out.println();
 		}
@@ -81,20 +84,30 @@ public class Life {
 				}	
 				
 				neigh -= field[i][n];
-				if((field[i][n] == 1) && (neigh < 2)){
+				if(field[i][n] == 1 && neigh < 2){
 					field[i][n] = 0;
+					//System.out.print("hi"); used this line of code to make sure this if statement is being read
 				}else if(field[i][n] == 1 && neigh > 3){
 					field[i][n] = 0;
 				}else if(field[i][n] == 0 && neigh == 3){
 					field[i][n] = 1;
 				}else if(field[i][n] == 1 && neigh == 3){
 					field[i][n] = 1;
+					//System.out.print("Input 1 in coordinates 1-20");
+					//field[i][n] = field[br.nextInt()][br.nextInt()];
 					//System.out.println("input coordinates for brith");
 					//field[br.nextInt()][br.nextInt()];
 					//note there is a problem with brith, need to understand what you are supposed to do with the birth
-				}else{
+				}else if (field[i][n] == 1 && neigh == 2){
+					field[i][n] = 1;
+				}
+				else{
 					field[i][n] = field[i][n];
 				}
+				/*if (field[i][n] == 1 && neigh ==3){
+					System.out.("input coordinates between 1-20");
+					field[i][n] = field[br.nextInt()][br.nextInt()] = 1;
+				}*/
 			}
 		}
 		
@@ -104,4 +117,26 @@ public class Life {
 		return field[i][n];
 	}
 	
+	public static void born(){
+		for(int h = 0; h < i - 1; h++){
+			for(int g = 0; g < n -1; g++){
+				
+				int neigh = 0;
+				for(int k = 0; k <= 1; k++){
+					for(int l = 0;  l <= 1; l++){
+						neigh += field[h +k][g +l];
+					}
+				}	
+				neigh -= field[i][n];
+		for(i = 0; i < 20; i++){
+			for(n = 0; n < 20; n++){
+				if (field[i][n] == 1 && neigh == 3){
+					System.out.print("input born coordinates");
+					field[br.nextInt()][br.nextInt()] = 1;
+				}
+			}
+		}
+	}
+		}
+	}
 }
